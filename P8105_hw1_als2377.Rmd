@@ -1,5 +1,5 @@
 ---
-title: "Simple document"
+title: "Homework 1"
 author: Allison Stewart
 output: github_document 
 ---
