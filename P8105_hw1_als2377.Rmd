@@ -49,5 +49,19 @@ as.factor(pull(prob1_df, samp_gt_0)) * (pull(prob1_df, samp))
 ```
 
 
-
 ## Problem 2 
+
+```{r load_palmerpenguins}
+data("penguins", package = "palmerpenguins")
+```
+
+**Description of the Penguins dataset**
+
+This data set includes the variables: `r variable.names(penguins)`. 
+
+The size of the dataset is `r nrow(penguins)` rows by `r ncol(penguins)` columns. 
+
+The mean flipper length is `r summarize(penguins, mean(flipper_length_mm, na.rm=T))`. 
+
+
+
