@@ -55,13 +55,20 @@ as.factor(pull(prob1_df, samp_gt_0)) * (pull(prob1_df, samp))
 data("penguins", package = "palmerpenguins")
 ```
 
-**Description of the Penguins dataset**
+**Description of Penguins dataset**
 
-This data set includes the variables: `r variable.names(penguins)`. 
+This dataset includes the variables: `r variable.names(penguins)`. 
 
 The size of the dataset is `r nrow(penguins)` rows by `r ncol(penguins)` columns. 
 
 The mean flipper length is `r summarize(penguins, mean(flipper_length_mm, na.rm=T))`. 
 
+Make a scatterplot of flipper length vs bill length. 
 
+```{r scatterplot}
+ggplot(data=penguins, aes (x = bill_length_mm, y = flipper_length_mm)) + geom_point(aes(color = species)) + scale_color_manual(values = c("red", "green", "blue"))
+ggsave("penguins.jpeg")
+```
+
+This scatterplot plots flipper length vs bill length and distinguishes the species by color. 
 
